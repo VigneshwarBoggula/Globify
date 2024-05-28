@@ -1,6 +1,6 @@
 # Music-Globe-Website
 
-A website to allow users to explore music from around the world by navigating an interactive globe. Built using Express.js and Three.js.
+A website to allow users to explore music from around the world by navigating an interactive globe. Built using Angular, Express.js and Three.js.
 
 ## Before You Begin
 
