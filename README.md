@@ -19,7 +19,6 @@ To run the development server:
 
 '''bash
 npm start
-npm serve
 '''
 
 Open [http://localhost:4200/](http://localhost:4200/) to see the result.
