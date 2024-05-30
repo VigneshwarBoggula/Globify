@@ -10,6 +10,7 @@ Install external dependences by running:
 npm install
 npm install express
 npm install three@0.127.0
+npm install @types/three
 '''
 
 ## Running Server
@@ -17,6 +18,7 @@ npm install three@0.127.0
 To run the development server:
 
 '''bash
+npm start
 npm serve
 '''
 
@@ -24,4 +26,9 @@ Open [http://localhost:4200/](http://localhost:4200/) to see the result.
 
 ## Future Plans
 
-To be announced
+Find Song Component
+-Explore Globe
+-Search Bar
+-Favorites
+Play Song Component
+Zoom In/Out & Lock In-Place Buttons
