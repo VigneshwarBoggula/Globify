@@ -25,7 +25,7 @@
 
 .component-container {
     position: absolute;
-    top: 32%; /* 50% w/ title */
+    top: 49.5%; /* 50% w/ title */
     left: 20px;
     transform: translateY(-50%);
     z-index: 1000; 
