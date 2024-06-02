@@ -1,4 +1,4 @@
-# Music-Globe-Website
+# Globify
 
 A website to allow users to explore music from around the world by navigating an interactive globe. Built using Angular, Express.js and Three.js.
 
