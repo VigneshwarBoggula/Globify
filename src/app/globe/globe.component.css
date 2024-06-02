@@ -23,8 +23,8 @@ canvas {
 button {
     margin: 5px;
     padding: 10px;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
+    background-color: rgba(231, 231, 231, 0.5);
+    color: rgb(0, 0, 0);
     border: none;
     border-radius: 5px;
     cursor: pointer;

@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, AfterViewInit, ViewChild, HostListener } from '@angular/core';
+import { Component, ElementRef, OnInit, AfterViewInit, ViewChild, HostListener, EventEmitter, Output } from '@angular/core';
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
@@ -9,6 +9,7 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 })
 export class GlobeComponent implements OnInit, AfterViewInit {
   @ViewChild('canvas', { static: true }) private canvasRef!: ElementRef<HTMLCanvasElement>;
+  @Output() locationSelected = new EventEmitter<{ cityName: string, countryName: string }>();
 
   private scene!: THREE.Scene;
   private camera!: THREE.PerspectiveCamera;
@@ -85,10 +86,11 @@ export class GlobeComponent implements OnInit, AfterViewInit {
     fetch('../../assets/data.json')
       .then(response => response.json())
       .then(data => {
-        data.forEach((city: { lat: number; lon: number }) => {
+        data.forEach((city: { lat: number; lon: number, city: string, country: string }) => {
           const dot = new THREE.Mesh(dotGeometry, dotMaterial);
           const position = latLonToVector3(city.lat, city.lon, 0.9);
           dot.position.copy(position);
+          dot.userData = { city, callback: () => this.onDotClick(city) }; // Store city data in userData
           this.scene.add(dot);
         });
       })
@@ -155,5 +157,30 @@ export class GlobeComponent implements OnInit, AfterViewInit {
 
   private render() {
     this.renderer.render(this.scene, this.camera);
+
+    // Check for dot clicks
+    const raycaster = new THREE.Raycaster();
+    const mouse = new THREE.Vector2();
+
+    const onMouseClick = (event: MouseEvent) => {
+      mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
+      mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
+
+      raycaster.setFromCamera(mouse, this.camera);
+      const intersects = raycaster.intersectObjects(this.scene.children);
+
+      for (const intersect of intersects) {
+        if (intersect.object.userData && intersect.object.userData['callback']) {
+          intersect.object.userData['callback']();
+          break;
+        }
+      }
+    };
+
+    window.addEventListener('click', onMouseClick);
+  }
+
+  private onDotClick(city: { city: string, country: string }) {
+    this.locationSelected.emit({ cityName: city.city, countryName: city.country });
   }
 }
