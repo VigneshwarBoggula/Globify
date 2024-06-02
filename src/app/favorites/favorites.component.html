@@ -1,1 +1,14 @@
-<p>favorites works!</p>
+<div class="favorites">
+  <h2>Favorites</h2>
+  <ul>
+      <li *ngFor="let song of favoriteSongs; let i = index" (click)="toggleSelection(i)" [class.selected]="song.selected">
+          <hr class="song-divider">
+          <div class="song-info">
+              <span class="checkmark"></span> 
+              <span class="song-title">{{ song.title }}</span>
+              <span class="song-artist">{{ song.artist }}</span>
+          </div>
+          <button (click)="removeSong(i); $event.stopPropagation()" class="remove-button">-</button>
+      </li>
+  </ul>
+</div>
