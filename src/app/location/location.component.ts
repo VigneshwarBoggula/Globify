@@ -6,7 +6,7 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./location.component.css']
 })
 export class LocationComponent {
-  cityName: string = 'New York';
+  cityName: string = 'New York City';
   countryName: string = 'United States';
   timezoneOffset: number = -5 * 60; 
 
