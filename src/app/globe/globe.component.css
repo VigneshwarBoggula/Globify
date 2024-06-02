@@ -30,6 +30,18 @@ button {
     cursor: pointer;
 }
 
+#fixed-circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px; 
+    height: 50px; 
+    background-color: transparent; 
+    border: 2px solid #FFF; 
+    border-radius: 50%;
+}
+
 @media only screen and (max-width: 1085px){
     .title h1{
         font-size: 1.8rem;
