@@ -10,4 +10,12 @@ export class AppComponent {
   public constructor(private titleService: Title) {
     this.titleService.setTitle('Globify');
   }
+  
+  selectedCityName: string = '';
+  selectedCountryName: string = '';
+  
+  onLocationSelected(location: { cityName: string, countryName: string }) {
+    this.selectedCityName = location.cityName;
+    this.selectedCountryName = location.countryName;
+  }
 }

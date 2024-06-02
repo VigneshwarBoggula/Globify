@@ -1,7 +1,16 @@
+<div class="overlay">
   <div class="title">
     <h1>Globify</h1>
   </div>
 
-  <app-globe></app-globe>
+  <div class="component-container">
+    <app-location></app-location>
+    <app-favorites></app-favorites>
+    <app-search></app-search>
+    <app-song></app-song>
+  </div>
+</div>
+
+<app-globe (locationSelected)="onLocationSelected($event)"></app-globe>
 
 <router-outlet></router-outlet>
