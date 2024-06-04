@@ -1,3 +1,10 @@
 <div class="search-tile">
-    <p>search works!</p>
+    <h2>Search</h2>
+    <i class="fas fa-search search-icon"></i>
+    <input class="search" type="text" [(ngModel)]="query" (input)="onSearch()" placeholder="Start typing a city name...">
+    <div *ngIf="filteredCities.length > 0" class="suggestions">
+        <div *ngFor="let city of filteredCities" class="suggestion-city" (click)="selectCity(city.city)">
+            {{ city.city }}
+        </div>
+    </div>
 </div>

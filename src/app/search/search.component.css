@@ -7,5 +7,78 @@
     width: 250px;
     height: 250px;
     margin: 20px auto;
-    text-align: center;
-  }
+    text-align: left;
+}
+.search {
+    font-family: "Circular Std";
+    display: inline-block;
+    padding: 15px;
+    width: 200px;
+    background-color: #ffffff;
+    color: #000000;
+    text-align: left;
+    text-decoration: none;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+}
+.search-enter {
+  font-family: "Circular Std";
+  display: inline-block;
+  padding: 15px;
+  background-color: #000000;
+  color: #21EC00;
+  text-align: right;
+  text-decoration: none;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin: 20px
+}
+.song-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.song-list li {
+  border-bottom: 1px solid #ccc;
+}
+
+.song-list li:last-child {
+  border-bottom: none;
+}
+
+.search-tile h2 {
+  font-size: 22px; 
+  color: #FFF;
+  margin-top: 0;
+  margin-bottom: 10px; 
+}
+
+ul button {
+  margin: 5px;
+  padding: 5px;
+  width: 200px;
+  text-align: left;
+  align-self: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.suggestions {
+
+}
+
+.suggestion-city {
+  font-family: "Circular Std";
+  color: white;
+  padding: 5px;
+}

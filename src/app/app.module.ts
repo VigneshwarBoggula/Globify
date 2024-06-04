@@ -8,6 +8,9 @@ import { LocationComponent } from './location/location.component';
 import { FavoritesComponent } from './favorites/favorites.component';
 import { SearchComponent } from './search/search.component';
 import { SongComponent } from './song/song.component';
+import { FormsModule } from '@angular/forms';
+import { CityService } from 'src/services/city.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -20,9 +23,11 @@ import { SongComponent } from './song/song.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    FormsModule,
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [CityService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
