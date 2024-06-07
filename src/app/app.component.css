@@ -8,24 +8,9 @@
     height: 100%;
 }
 
-.title {
-    color: rgb(231, 231, 231);
-    padding: 0 1rem;
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    z-index: 1000;
-}
-
-.title h1 {
-    text-transform: uppercase;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-}
-
 .component-container {
     position: absolute;
-    top: 49.5%; /* 50% w/ title */
+    top: 50%; 
     left: 20px;
     transform: translateY(-50%);
     z-index: 1000; 
@@ -38,5 +23,5 @@
 .component-container app-favorites,
 .component-container app-search,
 .component-container app-song {
-    margin-bottom: 10px; 
+    margin-bottom: 4.5px; 
 }
