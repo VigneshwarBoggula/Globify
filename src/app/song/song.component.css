@@ -65,9 +65,9 @@
 }
 
 .like-button .filled {
-  color: white;
-  background-color: white;
-  -webkit-text-stroke: 1px white; /* Creates an outline effect */
+  color: #cc0000;
+  background-color: #333;
+  -webkit-text-stroke: 1px #cc0000; /* Creates an outline effect */
 }
 
 .like-button .outlined {
