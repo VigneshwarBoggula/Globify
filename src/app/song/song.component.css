@@ -1,7 +1,7 @@
 .song-tile {
   font-family: 'Poppins', sans-serif;
   background-color: #333;
-  border: 1px solid #000; /* Border as per the image */
+  border: 1px solid #000;
   border-radius: 10px;
   padding: 10px 20px;
   width: 300px; 
@@ -25,7 +25,7 @@
 
 .song-artist {
   font-size: 14px;
-  color: #ffffff; /* Slightly darker for artist name */
+  color: #ffffff;
 }
 
 .song-controls {
@@ -67,10 +67,10 @@
 .like-button .filled {
   color: #cc0000;
   background-color: #333;
-  -webkit-text-stroke: 1px #cc0000; /* Creates an outline effect */
+  -webkit-text-stroke: 1px #cc0000;
 }
 
 .like-button .outlined {
   color: white;
-  -webkit-text-stroke: 1px white; /* Creates an outline effect */
+  -webkit-text-stroke: 1px white;
 }
