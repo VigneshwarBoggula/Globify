@@ -1,10 +1,76 @@
 .song-tile {
-    font-family: 'Poppins', sans-serif;
-    background-color: #333;
-    border: 2px solid #212121;
-    border-radius: 10px;
-    padding: 20px;
-    width: 250px; 
-    height: 60px;
-    text-align: center;
-  }
+  font-family: 'Poppins', sans-serif;
+  background-color: #333;
+  border: 1px solid #000; /* Border as per the image */
+  border-radius: 10px;
+  padding: 10px 20px;
+  width: 300px; 
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.song-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.song-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.song-artist {
+  font-size: 14px;
+  color: #ffffff; /* Slightly darker for artist name */
+}
+
+.song-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.song-controls button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: #ffffff;
+}
+
+.song-controls .play-pause {
+  margin: 0 10px;
+}
+
+.song-controls input[type="range"] {
+  flex: 1;
+  margin: 0 10px;
+}
+
+.like-button {
+  cursor: pointer;
+  font-size: 24px;
+}
+
+.like-button span {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  text-align: center;
+  line-height: 24px;
+}
+
+.like-button .filled {
+  color: white;
+  background-color: white;
+  -webkit-text-stroke: 1px white; /* Creates an outline effect */
+}
+
+.like-button .outlined {
+  color: white;
+  -webkit-text-stroke: 1px white; /* Creates an outline effect */
+}
